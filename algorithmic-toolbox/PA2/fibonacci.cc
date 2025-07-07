@@ -36,6 +36,7 @@ int main() {
    * Get times to recurse.
    */
   cin >> len;
+
   fibonacci_sequence(len);
 
   return 0;
