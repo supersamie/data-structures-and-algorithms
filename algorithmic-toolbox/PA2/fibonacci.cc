@@ -23,12 +23,12 @@ long long fibonacci_sequence(long long len) {
   long long a = 0, b = 1;
 
   for (long long i = 0; i < len; ++i) {
-    cout << a << " ";
+    // cout << a << " ";
     long long next = a + b;
     a = b;
     b = next;
   }
-  cout << endl;
+  // cout << endl;
   return a;
 }
 
@@ -46,7 +46,6 @@ int find_last_digit(long long len) {
 }
 
 int find_huge_fib(long long len, long long m) {
-  len = len % 60;
   int a = 0, b = 1;
 
   for (long long i = 0; i < len; ++i) {
@@ -102,7 +101,7 @@ int main() {
    */
   // long long len;
   // cin >> len;
-  // // cout << fibonacci_sequence(len) << endl;
+  // cout << fibonacci_sequence(len) << endl;
 
   /*
    * Find the last digit in the F(n)th number
@@ -114,11 +113,11 @@ int main() {
   /*
    * Find the nth Fibonacci number modulo m
    */
-  // long long len;
-  // cin >> len;
-  // long long m = 0;
-  // cin >> m; /* The modulo m */
-  // cout << find_huge_fib(len,m) << endl;
+  long long len;
+  cin >> len;
+  long long m = 0;
+  cin >> m; /* The modulo m */
+  cout << find_huge_fib(len,m) << endl;
 
   /*
    * Find last digit of sum of fib numbers
@@ -138,8 +137,8 @@ int main() {
   /*
    * Find the last digit of the sum of squares of fibonacci
    */
-  long long len;
-  cin >> len;
+  // long long len;
+  // cin >> len;
   // cout << find_last_dig_sum_of_sq_fib(len) << endl;
 
   return 0;
