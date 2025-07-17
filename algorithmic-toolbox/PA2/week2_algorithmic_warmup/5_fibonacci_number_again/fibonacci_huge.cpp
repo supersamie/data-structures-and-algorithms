@@ -9,20 +9,21 @@
 
 using namespace std;
 
-long long get_fibonacci_huge_naive(long long n, long long m) {
-  if (n <= 1)
-    return n;
+long long get_fibonacci_huge_naive(long long n, long long m)
+{
+    if (n <= 1)
+        return n;
 
-  long long previous = 0;
-  long long current = 1;
+    long long previous = 0;
+    long long current = 1;
 
-  for (long long i = 0; i < n - 1; ++i) {
-    long long tmp_previous = previous;
-    previous = current;
-    current = tmp_previous + current;
-  }
+    for (long long i = 0; i < n - 1; ++i) {
+        long long tmp_previous = previous;
+        previous = current;
+        current = tmp_previous + current;
+    }
 
-  return current % m;
+    return current % m;
 }
 
 /**
@@ -30,16 +31,17 @@ long long get_fibonacci_huge_naive(long long n, long long m) {
  *
  * @param m The modulo.
  */
-long long pisano_period(long long m) {
-  long long a = 0, b = 1, c;
-  for (long long i = 0; i < m * m; ++i) {
-    c = (a + b) % m;
-    a = b;
-    b = c;
-    if (a == 0 && b == 1)
-      return i + 1;
-  }
-  return m;
+long long pisano_period(long long m)
+{
+    long long a = 0, b = 1, c;
+    for (long long i = 0; i < m * m; ++i) {
+        c = (a + b) % m;
+        a = b;
+        b = c;
+        if (a == 0 && b == 1)
+            return i + 1;
+    }
+    return m;
 }
 
 /**
@@ -48,20 +50,22 @@ long long pisano_period(long long m) {
  * @param len How far in the sequence we want to go 'n'
  * @param m   What we are moding with
  */
-int find_huge_fib(long long len, long long m) {
-  int a = 0, b = 1;
+int find_huge_fib(long long len, long long m)
+{
+    int a = 0, b = 1;
 
-  for (long long i = 0; i < len; ++i) {
-    int next = (a + b) % m;
-    a = b;
-    b = next;
-  }
-  return a;
+    for (long long i = 0; i < len; ++i) {
+        int next = (a + b) % m;
+        a = b;
+        b = next;
+    }
+    return a;
 }
 
-int main() {
-  long long n, m;
-  std::cin >> n >> m;
-  n = n % pisano_period(m);
-  std::cout << find_huge_fib(n, m) << '\n';
+int main()
+{
+    long long n, m;
+    std::cin >> n >> m;
+    n = n % pisano_period(m);
+    std::cout << find_huge_fib(n, m) << '\n';
 }

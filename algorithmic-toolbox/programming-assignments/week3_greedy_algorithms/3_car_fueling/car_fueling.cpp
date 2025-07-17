@@ -3,16 +3,17 @@
 
 using std::cin;
 using std::cout;
-using std::vector;
 using std::max;
+using std::vector;
 
-int compute_min_refills(int dist, int tank, vector<int> & stops) {
+int compute_min_refills(int dist, int tank, vector<int> &stops)
+{
     // write your code here
     return -1;
 }
 
-
-int main() {
+int main()
+{
     int d = 0;
     cin >> d;
     int m = 0;

@@ -1,0 +1,17 @@
+# Ignore VCS and build artifacts
+.git/
+build/
+dist/
+
+# Ignore config and metadata files
+*.json
+*.yml
+*.yaml
+*.md
+*.lock
+*.toml
+
+# Ignore scripts or documentation you don’t want formatted
+scripts/
+docs/
+

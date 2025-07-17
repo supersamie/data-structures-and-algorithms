@@ -29,11 +29,12 @@ using namespace std;
 // fibonacci_fast (and the lines reading the input),
 //    and submit it to the grader.
 
-int fibonacci_naive(int n) {
-  if (n <= 1)
-    return n;
+int fibonacci_naive(int n)
+{
+    if (n <= 1)
+        return n;
 
-  return fibonacci_naive(n - 1) + fibonacci_naive(n - 2);
+    return fibonacci_naive(n - 1) + fibonacci_naive(n - 2);
 }
 
 // 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
@@ -45,32 +46,35 @@ int fibonacci_naive(int n) {
 //   fib(2)  fib(1) fib(1) fib(0)
 //   /    \
 // fib(1) fib(0)
-long long fibonacci_fast(long long len) {
-  long long a = 0, b = 1;
+long long fibonacci_fast(long long len)
+{
+    long long a = 0, b = 1;
 
-  for (long long i = 0; i < len; ++i) {
-    // cout << a << " ";
-    long long next = a + b;
-    a = b;
-    b = next;
-  }
-  // cout << endl;
-  return a;
+    for (long long i = 0; i < len; ++i) {
+        // cout << a << " ";
+        long long next = a + b;
+        a = b;
+        b = next;
+    }
+    // cout << endl;
+    return a;
 }
 
-void test_solution() {
-  assert(fibonacci_fast(3) == 2);
-  assert(fibonacci_fast(10) == 55);
-  for (int n = 0; n < 20; ++n)
-    assert(fibonacci_fast(n) == fibonacci_naive(n));
+void test_solution()
+{
+    assert(fibonacci_fast(3) == 2);
+    assert(fibonacci_fast(10) == 55);
+    for (int n = 0; n < 20; ++n)
+        assert(fibonacci_fast(n) == fibonacci_naive(n));
 }
 
-int main() {
-  long long n = 0;
-  std::cin >> n;
+int main()
+{
+    long long n = 0;
+    std::cin >> n;
 
-  // std::cout << fibonacci_naive(n) << '\n';
-  // test_solution();
-  std::cout << fibonacci_fast(n) << '\n';
-  return 0;
+    // std::cout << fibonacci_naive(n) << '\n';
+    // test_solution();
+    std::cout << fibonacci_fast(n) << '\n';
+    return 0;
 }
