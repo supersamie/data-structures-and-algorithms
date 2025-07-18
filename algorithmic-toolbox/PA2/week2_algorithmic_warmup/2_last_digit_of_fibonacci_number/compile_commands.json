@@ -1,0 +1,18 @@
+[
+  {
+    "arguments": [
+      "/opt/homebrew/opt/llvm/bin/clang++",
+      "-Wall",
+      "-Wextra",
+      "-O2",
+      "-std=c++11",
+      "-c",
+      "-o",
+      "fibonacci_last_digit.o",
+      "fibonacci_last_digit.cpp"
+    ],
+    "directory": "/Users/samster/github/data-structures-and-algorithms/algorithmic-toolbox/PA2/week2_algorithmic_warmup/2_last_digit_of_fibonacci_number",
+    "file": "/Users/samster/github/data-structures-and-algorithms/algorithmic-toolbox/PA2/week2_algorithmic_warmup/2_last_digit_of_fibonacci_number/fibonacci_last_digit.cpp",
+    "output": "/Users/samster/github/data-structures-and-algorithms/algorithmic-toolbox/PA2/week2_algorithmic_warmup/2_last_digit_of_fibonacci_number/fibonacci_last_digit.o"
+  }
+]
